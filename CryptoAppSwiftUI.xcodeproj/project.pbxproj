@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		080631B728B6A2AD00E8811F /* CryptoAppSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080631B628B6A2AD00E8811F /* CryptoAppSwiftUIApp.swift */; };
-		080631B928B6A2AD00E8811F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080631B828B6A2AD00E8811F /* ContentView.swift */; };
+		080631B928B6A2AD00E8811F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080631B828B6A2AD00E8811F /* MainView.swift */; };
 		080631BB28B6A2AD00E8811F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080631BA28B6A2AD00E8811F /* Assets.xcassets */; };
 		080631BE28B6A2AD00E8811F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080631BD28B6A2AD00E8811F /* Preview Assets.xcassets */; };
+		080631C928B6A38700E8811F /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080631C828B6A38700E8811F /* CryptoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		080631B328B6A2AD00E8811F /* CryptoAppSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoAppSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		080631B628B6A2AD00E8811F /* CryptoAppSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAppSwiftUIApp.swift; sourceTree = "<group>"; };
-		080631B828B6A2AD00E8811F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		080631B828B6A2AD00E8811F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		080631BA28B6A2AD00E8811F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		080631BD28B6A2AD00E8811F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		080631C828B6A38700E8811F /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,11 @@
 		080631B528B6A2AD00E8811F /* CryptoAppSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				080631C728B6A35100E8811F /* Service */,
+				080631C628B6A34B00E8811F /* ViewModel */,
+				080631C528B6A34600E8811F /* View */,
+				080631C428B6A33D00E8811F /* Model */,
 				080631B628B6A2AD00E8811F /* CryptoAppSwiftUIApp.swift */,
-				080631B828B6A2AD00E8811F /* ContentView.swift */,
 				080631BA28B6A2AD00E8811F /* Assets.xcassets */,
 				080631BC28B6A2AD00E8811F /* Preview Content */,
 			);
@@ -65,6 +70,36 @@
 				080631BD28B6A2AD00E8811F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		080631C428B6A33D00E8811F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				080631C828B6A38700E8811F /* CryptoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		080631C528B6A34600E8811F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				080631B828B6A2AD00E8811F /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		080631C628B6A34B00E8811F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		080631C728B6A35100E8811F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +172,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				080631B928B6A2AD00E8811F /* ContentView.swift in Sources */,
+				080631C928B6A38700E8811F /* CryptoModel.swift in Sources */,
+				080631B928B6A2AD00E8811F /* MainView.swift in Sources */,
 				080631B728B6A2AD00E8811F /* CryptoAppSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

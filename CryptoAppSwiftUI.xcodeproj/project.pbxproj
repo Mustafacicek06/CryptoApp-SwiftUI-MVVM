@@ -12,6 +12,7 @@
 		080631BB28B6A2AD00E8811F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080631BA28B6A2AD00E8811F /* Assets.xcassets */; };
 		080631BE28B6A2AD00E8811F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 080631BD28B6A2AD00E8811F /* Preview Assets.xcassets */; };
 		080631C928B6A38700E8811F /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080631C828B6A38700E8811F /* CryptoModel.swift */; };
+		0878F9C528B6AAC000884B39 /* CryptoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0878F9C428B6AAC000884B39 /* CryptoService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		080631BA28B6A2AD00E8811F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		080631BD28B6A2AD00E8811F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		080631C828B6A38700E8811F /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
+		0878F9C428B6AAC000884B39 /* CryptoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		080631C728B6A35100E8811F /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				0878F9C428B6AAC000884B39 /* CryptoService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0878F9C528B6AAC000884B39 /* CryptoService.swift in Sources */,
 				080631C928B6A38700E8811F /* CryptoModel.swift in Sources */,
 				080631B928B6A2AD00E8811F /* MainView.swift in Sources */,
 				080631B728B6A2AD00E8811F /* CryptoAppSwiftUIApp.swift in Sources */,

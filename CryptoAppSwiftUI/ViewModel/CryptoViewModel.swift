@@ -5,7 +5,7 @@
 //  Created by Mustafa Çiçek on 25.08.2022.
 //
 import Foundation
-
+// gozlemlenebilir
 class CryptoListViewModel: ObservableObject {
     
     // published edip baska bir yerden subscrib olup dinleyebiliriz
@@ -13,6 +13,24 @@ class CryptoListViewModel: ObservableObject {
     
     let cryptoService = CryptoService()
     
+    func donwloadCryptoAsync(url: URL) async {
+        do {
+        let crpyots = try await cryptoService.downloadCurrenciesAsync(url: url)
+            // published after that UI changed and than we will need that main thread
+            DispatchQueue.main.async {
+                self.cryptoList = crpyots.map(CryptoViewModel.init)
+            }
+        } catch {
+            print("ViewModel downloadCryptoAsync error")
+        }
+    }
+    
+    
+    
+    
+    
+    
+    /*
     func downloadCrypto(url: URL){
         cryptoService.downloadCurrencies(url: url) { result in
             switch(result){
@@ -30,6 +48,7 @@ class CryptoListViewModel: ObservableObject {
             }
         }
     }
+    */
 }
 
 import Foundation

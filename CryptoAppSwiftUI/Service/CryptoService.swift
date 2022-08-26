@@ -9,7 +9,17 @@ import Foundation
 
 
 class CryptoService {
+    // ı dont handle errors that class  -> async throws
+    func downloadCurrenciesAsync(url: URL) async throws -> [CryptoModel] {
+        // ı am not use repsonse so
+        let (data, _ ) = try await URLSession.shared.data(from: url)
+        
+        let currencies = try? JSONDecoder().decode([CryptoModel].self, from: data)
+        
+        return currencies ?? []
+    }
     
+    /*
     func downloadCurrencies(url: URL, completion: @escaping (Result<[CryptoModel]?,BaseError>) -> Void) {
         URLSession.shared.dataTask(with: url) { data, response, error in
             
@@ -31,9 +41,10 @@ class CryptoService {
             completion(.success(currencies))
             
         }.resume()
+     */
     }
     
-}
+
 
 
 enum BaseError: Error {

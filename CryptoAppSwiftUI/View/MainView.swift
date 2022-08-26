@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+
 struct MainView: View {
     
     
@@ -27,14 +29,38 @@ struct MainView: View {
                 }
               
                 
-            }.navigationTitle("Crypto SwiftUI")
+            }.toolbar(content: {
+                Button {
+                    Task.init {
+                        let myApiKey = "ae00a59a93623c9005482d4d573310e67e4b1434"
+                               let baseUrl =  URL(string: "https://api.nomics.com/v1/currencies/ticker?key=\(myApiKey)")
+                        
+                        if let baseUrl = baseUrl {
+                            await cryptoListViewModel.downloadCryptosContinuation(url: baseUrl)
+                        }
+                    }
+                } label: {
+                    Text("Refresh")
+                }
+
+
+
+            })
+            .navigationTitle("Crypto SwiftUI")
         }.task {
             // make some jobs after ui drawing
             let myApiKey = "ae00a59a93623c9005482d4d573310e67e4b1434"
                    let baseUrl =  URL(string: "https://api.nomics.com/v1/currencies/ticker?key=\(myApiKey)")
+            
+            if let baseUrl = baseUrl {
+                await cryptoListViewModel.downloadCryptosContinuation(url: baseUrl)
+            }
+            
+            /*
             if let baseUrl = baseUrl {
                await  cryptoListViewModel.donwloadCryptoAsync(url: baseUrl)
             }
+             */
         }
         
         

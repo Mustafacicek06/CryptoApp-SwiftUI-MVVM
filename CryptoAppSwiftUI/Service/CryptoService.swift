@@ -19,7 +19,24 @@ class CryptoService {
         return currencies ?? []
     }
     
-    /*
+    
+    func downloadCurrenciesContinuation(url: URL) async throws -> [CryptoModel] {
+       try await withCheckedThrowingContinuation { continuation in
+           
+           downloadCurrencies(url: url) { result in
+               switch (result) {
+                   
+               case .success(let cryptos):
+                   continuation.resume(returning: cryptos ?? [])
+               case .failure(let error):
+                   continuation.resume(throwing: error)
+               }
+           }
+           
+        }
+    }
+    
+    
     func downloadCurrencies(url: URL, completion: @escaping (Result<[CryptoModel]?,BaseError>) -> Void) {
         URLSession.shared.dataTask(with: url) { data, response, error in
             
@@ -41,10 +58,10 @@ class CryptoService {
             completion(.success(currencies))
             
         }.resume()
-     */
+     
     }
     
-
+}
 
 
 enum BaseError: Error {
